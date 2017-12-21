@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -std=c99 -pedantic -D_XOPEN_SOURCE=600 -Wall -Werror -g
+#CFLAGS = -std=c99 -pedantic -D_XOPEN_SOURCE=600 -Wall -Werror -g
 RM = rm -f
 SRCS = $(wildcard *.c)
 PROGS = $(patsubst %.c,%,$(SRCS))
