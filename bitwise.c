@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 int main (void) {
-  unsigned int a = 0;
+  typedef unsigned int uint;
+  uint a = 0;
 
   // ~ negates each bit, including the sign bit
   // so ~0 == -1
@@ -9,17 +10,17 @@ int main (void) {
   a = ~a;
   printf("a = %u\n", a);
 
-  // & and
+  // & and, | or, ^ exclusive or
+  int x = 1 & 1;
+  printf("1 & 1 is %d\n", x);
 
-
-
-  // | or
-
-
-
-  // ^ exclusive or
-
+  int y = 1;
+  y &= x; // same as y = y & x. Also get ^=, |=, <<=, >>=
+  
+  printf("1 << 2 is %d\n", 1 << 2);
+  printf("0x1 << 2 is %d\n", 0x1 << 2);
 
 
   return 0;
 }
+
